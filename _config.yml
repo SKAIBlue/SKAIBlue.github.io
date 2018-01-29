@@ -15,7 +15,7 @@ name                     : "Jong woo Park"
 description              : "I will post here, my project information or study note."
 url                      : "https://skaiblue.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "SKAIBlue"
 teaser                   : "/assets/images/earth.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/SKAIBlue"
+  github           : "/SKAIBlue"
   gitlab           :
   google_plus      :
   keybase          :
