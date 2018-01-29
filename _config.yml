@@ -86,8 +86,8 @@ analytics:
 author:
   name             : "Jong Woo Park"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "I like game and programming."
+  location         : "대한민국 경기도 수원시"
   email            : "jwmtp2@gmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
