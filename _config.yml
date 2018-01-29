@@ -16,7 +16,7 @@ description              : "I will post here, my project information or study no
 url                      : "https://skaiblue.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "SKAIBlue"
-teaser                   : "/assets/images/earth.jpg"
+teaser                   : "/assets/images/earth.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
