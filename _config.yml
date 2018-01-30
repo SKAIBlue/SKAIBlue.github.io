@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://domain.tld
+url:                   https://skaiblue.github.io
 
 # IMPORTANT: Set The "base URL" of your site.
 #
@@ -19,10 +19,10 @@ baseurl:               ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  en
+lang:                  ko
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 SKAIBlue's develop pages
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -91,7 +91,7 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      UA-112249371-2
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
