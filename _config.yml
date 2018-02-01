@@ -33,11 +33,11 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+  모바일, 게임, 웹 프로그래밍
+  C/C++/JAVA/C#/JavaScript/Html
 
 # A list of keywords for your blog
-keywords:              []
+keywords:              [C, C++, java, C#, html, Unity, Android]
 
 # Used by jekyll-seo-tag...
 logo:                  /assets/icons/icon.png
@@ -45,8 +45,8 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Jong Woo Park
+  email:               jwmtp2@gmail.com
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
