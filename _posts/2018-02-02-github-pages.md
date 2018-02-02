@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Github] Pages를 이용해 개인 페이지를 만들기
+title: Github Pages를 이용해 개인 페이지를 만들기
 description: >
   Github에서 Pages 라는 기능을 제공합니다. 이것을 이용하면 이 사이트와 같은 개인 웹 페이지를 만들 수 있습니다. Github Pages 기능을 이용하는 방법을 알아보겠습니다.
 tags: [etc]
