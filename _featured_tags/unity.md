@@ -5,7 +5,7 @@ slug: unity
 menu: true
 order: 4
 description: >
-  안드로이드에 대한 내용이 기록됩니다.
+  유니티에 대한 내용이 기록됩니다.
 # accent_color: '#268bd2'
 # accent_image:
 #   background: '#202020'
