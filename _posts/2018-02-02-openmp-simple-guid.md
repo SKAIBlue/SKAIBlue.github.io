@@ -76,7 +76,7 @@ int main()
 
 위 두 결과 화면을 비교하면 OpenMP가 활성화 되어 병렬 처리를 했을 때, 성능이 확실히 향상된 것을 볼 수 있다.
 
-![](https://skaiblue.github.io/assets/img/posts/c/openmpguid/3.png "CPU Usage")
+![](https://skaiblue.github.io/assets/img/posts/c/openmpguid/4.png "CPU Usage")
 
 또한 작업 관리자를 실행 해 보면, 모든 코어에 작업이 분배되어 프로그램이 실행되는 것을 확인할 수 있다.
 
