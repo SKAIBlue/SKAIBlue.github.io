@@ -1,7 +1,7 @@
 ---
 layout: list
-title: ETC
-slug: etc
+title: Android
+slug: android
 menu: true
 order: 3
 description: >
