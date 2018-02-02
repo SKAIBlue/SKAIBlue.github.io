@@ -1,7 +1,7 @@
 ---
 layout: list
-title: C/C++
-slug: c/c++
+title: ETC
+slug: etc
 menu: true
 order: 4
 description: >
