@@ -3,9 +3,9 @@ layout: list
 title: C/C++
 slug: c/c++
 menu: true
-order: 2
+order: 4
 description: >
-  C/C++에 대한 내용을 기록합니다.
+  기타 다양한 포스트가 업로드 됩니다.
 # accent_color: '#268bd2'
 # accent_image:
 #   background: '#202020'

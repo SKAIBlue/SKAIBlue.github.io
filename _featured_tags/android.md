@@ -3,9 +3,9 @@ layout: list
 title: ETC
 slug: etc
 menu: true
-order: 4
+order: 3
 description: >
-  기타 다양한 내용이 기록됩니다.
+  안드로이드에 대한 내용이 기록됩니다.
 # accent_color: '#268bd2'
 # accent_image:
 #   background: '#202020'
