@@ -25,7 +25,7 @@ OpenMP를 따로 설치하지 않아도 Visual Studio에서 기본적으로 지�
 # 2.사용법
 아래는 OpenMP를 이용해 2중 반복문을 병렬로 처리하고 수행 시간을 출력하는 예제이다.
 
-~~~C
+```C
 #include <iostream>
 #include <time.h>
 
@@ -56,12 +56,12 @@ int main()
   std::cout << "run time = " << clock() - start << " milliseconds." << std::endl;
   return 0;
 }
-~~~
+```
 
 간단하게 for문 위에 아래의 문장을 작성하면 해당 반복문은 멀티 코어로 병렬 처리된다.
-~~~C
+```C
 #pragma omp parallel for
-~~~
+```
 해당 라인이 있는 경우와 없는 경우에 대한 시간을 실행을 해서 측정 해보면 다음과 같다.
 
-본인의 PC`i3 4세대 2코어 4스레드)에서의 결과는 다음과 같다.
+본인의 PC`i3 4세대 2코어 4스레드`에서의 결과는 다음과 같다.
