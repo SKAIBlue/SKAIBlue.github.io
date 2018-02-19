@@ -175,12 +175,12 @@ module.exports = {
 
 ```
 
-변경해야 할 값은 아래 다섯가지다.
-- host: '<IPv4 퍼블릭 IP>'
-- pem: '<다운받은 키페어 경로(ex /User/Anonymous/sign/keypair.pem)>'
-- name: '<앱 이름>'
-- path: '../<프로젝트 폴더 이름>'
-- ROOT_URL: '<퍼블릭 DNS(IPv4)>'
+변경해야 할 값은 아래 다섯 가지다.
+- host: '`<IPv4 퍼블릭 IP>`'
+- pem: '`<다운받은 키페어 경로(ex /User/Anonymous/sign/keypair.pem)>`'
+- name: '`<앱 이름>`'
+- path: '../`<프로젝트 폴더 이름>`'
+- ROOT_URL: '`<퍼블릭 DNS(IPv4)>`'
 
 위 값을 변경 후에 아래 명령어를 실행하면 AWS 서버에 배포하기 위한 설정을 한다
 ```
