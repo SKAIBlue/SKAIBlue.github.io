@@ -32,7 +32,7 @@ Meteor를 이용해서 웹 앱을 만들고 있었다. AWS를 통해 배포를 �
 
 ![](https://skaiblue.github.io/assets/img/posts/meteor/awsdeploy/4.png "AWS Select Instance type")
 
-AWS의 성능을 결정하는 페이지이다. 나중에 변경할 수 있으므로 무료로 사용할 수 있는 기본값을 그대로 놔두고 오른쪽 하단의 `다음: 인스턴스 세부정보 구성` 버튼을 누른다.
+AWS의 성능을 결정하는 페이지이다. 나중에 변경할 수 있으므로 무료로 사용할 수 있는 기본값으로 그대로 놔두고 오른쪽 하단의 `다음: 인스턴스 세부정보 구성` 버튼을 누른다.
 
 ![](https://skaiblue.github.io/assets/img/posts/meteor/awsdeploy/5.png "AWS Auto Scaling")
 
