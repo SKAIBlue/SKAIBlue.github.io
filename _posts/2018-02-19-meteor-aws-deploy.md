@@ -40,7 +40,7 @@ AWS의 성능을 결정하는 페이지이다. 나중에 변경할 수 있으므
 
 ![](https://skaiblue.github.io/assets/img/posts/meteor/awsdeploy/6.png "AWS Add Storage")
 
-이 패이지는 저장소를 설정하는 페이지이다. 최대 30GB까지 무료로 쓸 수 있으므로 팍팍 활용하도록 한다. 기본값 8GB로 설정되어 있으니 30GB로 변경한 후 `다음: 테그 추가` 버튼을 누른다.
+이 페이지는 저장소를 설정하는 페이지이다. 최대 30GB까지 무료로 쓸 수 있으므로 팍팍 활용하도록 한다. 기본값 8GB로 설정되어 있으니 30GB로 변경한 후 `다음: 테그 추가` 버튼을 누른다.
 
 ![](https://skaiblue.github.io/assets/img/posts/meteor/awsdeploy/7.png "AWS IP Port settings")
 
