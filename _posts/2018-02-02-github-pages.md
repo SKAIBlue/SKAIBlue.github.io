@@ -13,11 +13,11 @@ Github은 개발자라면 모르는 사람이 없을것이다. Github은 Git의 
 # Git Repository 생성
 Github에 로그인을 하여 리포지토리를 생성한다.
 
-![]("https://skaiblue.github.io/assets/img/posts/etc/githubpage/1.png",)
+![](https://skaiblue.github.io/assets/img/posts/etc/githubpage/1.png "")
 
 로그인을 했을 때 보이는 페이지에서 오른쪽 패널에 `New Repository`를 누르면 리포지토리를 생성하는 페이지로 이동한다.
 
-![]("https://skaiblue.github.io/assets/img/posts/etc/githubpage/2.png",)
+![](https://skaiblue.github.io/assets/img/posts/etc/githubpage/2.png "")
 
 리포지토리 생성 페이지에서 Repository Name을 `자신의계정이름.github.io`로 설정한다.
 **모두 소문자로 작성해야한다**.
