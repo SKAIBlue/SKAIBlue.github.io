@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenCV 간단한 사용법
+title: OpenMP 간단한 사용법
 description: >
   윈도우에서 OpenMP를 사용하는 방법을 기록하고자 한다. 사용해보니 C++에서 thread를 사용하는 것 보다 간편하다.
 tags: [c/c++]
