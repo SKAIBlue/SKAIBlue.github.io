@@ -41,7 +41,7 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
    cocos new CocosCreatorTest -p com.skaiblue.cocoscreatortest -l cpp -d ~/Developments/Cocos2d-x
    ```
 
-# Cocos Creator 프로젝트 설정
+# [XCode]Cocos Creator 프로젝트 설정
 1. 먼저 앞서 알려드린대로 명령어로 cpp 프로젝트를 먼저 생성하셔야 합니다. 프로젝트를 생성해주세요. 여기서 생성한 프로젝트 경로를 `cpp 프로젝트 루트`라고 부르겠습니다.
    
 2. Cocos Creator 에서 프로젝트를 생성합니다. 테스트를 위해 Hello World 템플릿으로 프로젝트를 생성했습니다. 프로젝트가 생성되면 Cocos Creator 개발 화면(?)이 뜰겁니다.
@@ -116,5 +116,20 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
 5. command + r을 눌러 실행해 봅니다.
     ![](https://skaiblue.github.io/assets/img/posts/cocos/start/10.png "실행화면")
 
-# Windows나 Android 설정
-추후 직접 실행해보고 내용 추가하겠습니다.
+# [Visual Studio]Cocos Creator 프로젝트 설정
+[XCode]Cocos Creator 프로젝트 설정의 7번까지의 과정이 동일합니다.
+1. `cpp 프로젝트 루트`/proj.win32에 찾아가면 [프로젝트이름].sln 파일이 있습니다. 실행하면 Visual Studio가 실행이 됩니다.
+2. 윈도우 탐색기로 `cpp 프로젝트 루트`/Classes에 찾아가 reader 폴더를 솔수션 탐색기에 [프로젝트이름]하위의 src로 드래그합니다.
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/11.png "Visual Studio")
+3. Ctrl + F5키를 눌러서 잘 되는지 실행해봅니다.
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/12.png "Windows 실행화면")
+
+    ※ 솔루션 탐색기에서 src 하위에 필터를 만들어서 소스 파일들을 정리하면 보기 편합니다.
+
+
+# [Android Studio]Cocos Creator 프로젝트 설정
+[XCode]Cocos Creator 프로젝트 설정의 7번까지의 과정이 동일합니다.
+1. `cpp 프로젝트 루트`/proj.android를 안드로이드 스튜디오로 열어주세요. 프로젝트가 열리면 Gradle에서 이것저것 프로세스가 돌아갈겁니다. 끝날 때까지 기다려주세요.
+    
+    ※ 일부 오류는 하단 빌드 정보 창에서 바로 해결 가능합니다.
+2. 
