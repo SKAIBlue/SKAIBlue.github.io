@@ -1,11 +1,11 @@
 ---
 layout: list
-title: ETC
-slug: etc
+title: Cocos2D-X
+slug: cocos2d
 menu: true
-order: 8
+order: 3
 description: >
-  기타 다양한 포스트가 업로드 됩니다.
+  Cocos2D-X 게임 개발에 대해서 기록합니다.
 # accent_color: '#268bd2'
 # accent_image:
 #   background: '#202020'

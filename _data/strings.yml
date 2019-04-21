@@ -41,7 +41,7 @@ cookies_banner:
   okay:                Okay
 
 not_found:
-  title:               '404: Page Not Found'
+  title:               '404: 페이지를 찾을 수 없음'
   message:             |
     Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
     <!--home_link--> to try finding it again.
