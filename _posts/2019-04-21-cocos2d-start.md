@@ -45,15 +45,15 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
 1. 먼저 앞서 알려드린대로 명령어로 cpp 프로젝트를 먼저 생성하셔야 합니다. 프로젝트를 생성해주세요. 여기서 생성한 프로젝트 경로를 `cpp 프로젝트 루트`라고 부르겠습니다.
    
 2. Cocos Creator 에서 프로젝트를 생성합니다. 테스트를 위해 Hello World 템플릿으로 프로젝트를 생성했습니다. 프로젝트가 생성되면 Cocos Creator 개발 화면(?)이 뜰겁니다.
-![](https://skaiblue.github.io/assets/img/posts/cocos/start/1.png "")
+![](https://skaiblue.github.io/assets/img/posts/cocos/start/1.png "cocos creator 프로젝트 생성 화면")
 
-3. 터미널에서 다음 명령어를 실행해 creator_to_cocos2dx 소스코드를 복제합니다.
+1. 터미널에서 다음 명령어를 실행해 creator_to_cocos2dx 소스코드를 복제합니다.
    ```
    git clone https://github.com/cocos2d/creator_to_cocos2dx
    ```
 
-4. creator_to_cocos2dx/creator_project/packages 폴더에 creator_to_cocos2dx 폴더가 있습니다. 이 폴더를 1에서 생성한 프로젝트 폴더의 packages 폴더에 복사해 주세요
-![](https://skaiblue.github.io/assets/img/posts/cocos/start/2.png "")
+2. creator_to_cocos2dx/creator_project/packages 폴더에 creator_to_cocos2dx 폴더가 있습니다. 이 폴더를 1에서 생성한 프로젝트 폴더의 packages 폴더에 복사해 주세요
+![](https://skaiblue.github.io/assets/img/posts/cocos/start/2.png "패키지 복사")
 
 5. 제대로 복사 하셨으면 Cocos Creator 개발 화면의 콘솔 뷰에 아래와 같은 텍스트가 표시됩니다.
    ```
@@ -62,21 +62,21 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
    ```
 
 6. 플러그인 셋업을 위해 툴바에서 Project->LuaCpp Support->Setup Target Project를 실행합니다.
-![](https://skaiblue.github.io/assets/img/posts/cocos/start/3.png "")
+![](https://skaiblue.github.io/assets/img/posts/cocos/start/3.png "타겟 프로젝트 셋업")
 
 7. `cpp 프로젝트 루트`의 경로로 설정한 후 Build를 눌러주세요.
-![](https://skaiblue.github.io/assets/img/posts/cocos/start/4.png "")
+![](https://skaiblue.github.io/assets/img/posts/cocos/start/4.png "타겟 프로젝트 설정")
 
 8. Finder에서 `cpp 프로젝트 루트`/proj.ios_mac에 찾아가면  CocosCreatorTest.xcodeproj파일이 있습니다. 실행하면 XCode가 실행이 됩니다.
    
-9. XCode의 프로젝트 탐색기에서 프로젝트를 선택하면 보이는 페이지에서 아래 사진과 같이 PROJECT->[프로젝트 이름]->Build Settings에서 **Header Search Path**를 찾아서 아래 path를 추가합니다.
+9. XCode의 프로젝트 탐색기에서 프로젝트를 선택하면 보이는 페이지에서 아래 사진과 같이 PROJECT->[프로젝트 이름]->Build Settings에서 **Header Search Paths**를 찾아서 아래 path를 추가합니다.
    ```
    $(SRCROOT)/../Classes/reader
    ```
-    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/5.png "")
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/5.png "Header Search Paths")
 
 10. Finder에서 `cpp 프로젝트 루트`/Classes에 찾아가면 reader 폴더가 있습니다. 이 폴더를 XCode의 프로젝트 탐색기에 Classes 하위로 드래그 합니다. 아래 사진과 같이 설정해 주시고 Finish를 눌러주세요.
-    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/6.png "")
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/6.png "코드 추가")
 
 11. 프로젝트 탐색기에서 아래 네 개의 파일을 삭제해주세요. 휴지통으로 보내지마시고 **Remove References**를 눌러서 참조만 지우세요.
     ```
@@ -85,15 +85,15 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
     Classes/reader/dragonbones/Android.mk
     Classes/reader/dragonbones/CMakeLists.txt
     ```
-    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/7.png "")
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/7.png "필요 없는 참조 삭제")
 12. Finder에서 `cpp 프로젝트 루트`/Resources에 찾아가면 creator 폴더가 있습니다. 이 폴더를 XCode의 프로젝트 탐색기에 Resources 하위로 드래그 합니다. 아래 사진과 같이 설정해 주시고 Finish를 눌러주세요.
-    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/8.png "")
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/8.png "리소스 추가")
 
 13. 마지막으로 command + R키를 눌러서 잘 되는지 실행해봅니다.
 
 # Cocos Creator로 만든 씬 간단 테스트
 1. 테스트를 위해 씬을 대충 수정해봤습니다. 적당히 수정 하셨으면 씬 저장 후 툴바에서 Project->LuaCpp Support->Build Now 로 빌드 합니다.
-![](https://skaiblue.github.io/assets/img/posts/cocos/start/9.png "")
+![](https://skaiblue.github.io/assets/img/posts/cocos/start/9.png "간단 씬")
 
 2. XCode로 돌아와 AppDelegate.cpp 상단에 다음 헤더파일을 추가합니다.
     ```CPP
@@ -114,7 +114,7 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
     auto scene = reader->getSceneGraph();
     ```
 5. command + r을 눌러 실행해 봅니다.
-    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/10.png "")
+    ![](https://skaiblue.github.io/assets/img/posts/cocos/start/10.png "실행화면")
 
 # Windows나 Android 설정
 추후 직접 실행해보고 내용 추가하겠습니다.
