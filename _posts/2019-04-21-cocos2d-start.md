@@ -137,11 +137,14 @@ Android Build 때문에 이틀을 삽질했네요. 마지막으로 안드로이�
 
 1. 안드로이드 스튜디오로 `cpp 프로젝트 루트`/proj.android를 열어주세요.
 2. 프로젝트 탐색기에서 gradle.properties 파일을 열어 PROP_APP_ABI와 PROP_BUILD_TYPE 영역 내용을 다음과 같이 수정합니다. 제가 쓰는 cocos2d-x 버전이 기본적으로 CMake로 빌드하게 되어있습니다. ndk-build 시스템으로 빌드하기 위해 변경해줍니다. 또한 모든 타입의 ABI에 대해 빌드를 가능하게 합니다.
+  
    ```Gradle
    PROP_APP_ABI=arm64-v8a:armeabi-v7a:x86:x86_64
    PROP_BUILD_TYPE=ndk-build
    ```
+
 3. 텍스트 에디터로 `creator 프로젝트 루트`/packages/creator-luacpp-support/reader/Android.mk 파일을 열어 다음과 같이 수정합니다.
+   
    ```CMake
    LOCAL_PATH := $(call my-dir)
 
@@ -179,7 +182,9 @@ Android Build 때문에 이틀을 삽질했네요. 마지막으로 안드로이�
    $(call import-add-path, $(path))
    $(call import-module, dragonbones)
    ```
+
 4. 3. 텍스트 에디터로 `creator 프로젝트 루트`/packages/creator-luacpp-support/reader/dragonbones/Android.mk 파일을 열어 다음과 같이 수정합니다.
+  
    ```CMake
    LOCAL_PATH := $(call my-dir)
 
@@ -229,6 +234,7 @@ Android Build 때문에 이틀을 삽질했네요. 마지막으로 안드로이�
 5. Cocos creator에서 Project->LuaCpp Support->Build Now를 눌러 다시 빌드 합니다.
 
 6. `cpp 프로젝트 루트`/proj.android/app/jni/Android.mk를 열어 다음과 같이 수정합니다.
+   
    ```CMake
    LOCAL_PATH := $(call my-dir)
 
