@@ -24,6 +24,10 @@ Cocos2d-x는 `c++`, `Javascript`, `Lua`를 지원합니다. 저는 c++로 개발
 **Cocos creator**라는 것이 생겼네요. 뭔가 게임 엔진 처럼 Scene View가 있어서 저걸 쓰면 개발하기 편할것 같으니 써보겠습니다.
 일단 자신의 환경에 맞게 `Cocos2D-x`는 다운 받으신 뒤 압축을 푸시고, `Cocos Creator`는 다운 받아서 설치하세요.
 
+제가 다운받은 버전은 다음과 같습니다. 버전에 따라 다른점이 있으니 참고해주세요.
+- Cocos2d-x: 3.17.1
+- Cocos Creator: 2.1.0
+
 # Cocos2d-x 초기 설정
 Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저는 안드로이드 개발을 해왔기 때문에 이미 몇가지 셋팅이 되어 있어서 링크로 대체합니다.
 
@@ -44,7 +48,7 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
 # [XCode]Cocos Creator 프로젝트 설정
 1. 먼저 앞서 알려드린대로 명령어로 cpp 프로젝트를 먼저 생성하셔야 합니다. 프로젝트를 생성해주세요. 여기서 생성한 프로젝트 경로를 `cpp 프로젝트 루트`라고 부르겠습니다.
    
-2. Cocos Creator 에서 프로젝트를 생성합니다. 테스트를 위해 Hello World 템플릿으로 프로젝트를 생성했습니다. 프로젝트가 생성되면 Cocos Creator 개발 화면(?)이 뜰겁니다.
+2. Cocos Creator 에서 프로젝트를 생성합니다. 테스트를 위해 Hello World 템플릿으로 프로젝트를 생성했습니다. 여기서 생성한 프로젝트 경로를 `creator 프로젝트 루트`라고 부르겠습니다. 프로젝트가 생성되면 Cocos Creator 개발 화면(?)이 뜰겁니다.
 ![](https://skaiblue.github.io/assets/img/posts/cocos/start/1.png "cocos creator 프로젝트 생성 화면")
 
 1. 터미널에서 다음 명령어를 실행해 creator_to_cocos2dx 소스코드를 복제합니다.
@@ -52,7 +56,7 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
    git clone https://github.com/cocos2d/creator_to_cocos2dx
    ```
 
-2. creator_to_cocos2dx/creator_project/packages 폴더에 creator_to_cocos2dx 폴더가 있습니다. 이 폴더를 1에서 생성한 프로젝트 폴더의 packages 폴더에 복사해 주세요
+2. creator_to_cocos2dx/creator_project/packages 폴더에 creator_to_cocos2dx 폴더가 있습니다. 이 폴더를 `creator 프로젝트 루트`/packages 폴더에 복사해 주세요
 ![](https://skaiblue.github.io/assets/img/posts/cocos/start/2.png "패키지 복사")
 
 5. 제대로 복사 하셨으면 Cocos Creator 개발 화면의 콘솔 뷰에 아래와 같은 텍스트가 표시됩니다.
@@ -124,9 +128,139 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
 3. Ctrl + F5키를 눌러서 잘 되는지 실행해봅니다.
     ![](https://skaiblue.github.io/assets/img/posts/cocos/start/12.png "Windows 실행화면")
 
-    ※ 솔루션 탐색기에서 src 하위에 필터를 만들어서 소스 파일들을 정리하면 보기 편합니다.
+    ※ 솔루션 탐색기에서 src 하위에 필터를 만들어서 reader의 소스 파일들을 정리하면 보기 편합니다.
 
 
 # [Android Studio]Cocos Creator 프로젝트 설정
+Android Build 때문에 이틀을 삽질했네요. 마지막으로 안드로이드 스튜디오 설정하는 방법입니다.
 [XCode]Cocos Creator 프로젝트 설정의 7번까지의 과정이 동일합니다.
-추후 업데이트
+
+1. 안드로이드 스튜디오로 `cpp 프로젝트 루트`/proj.android를 열어주세요.
+2. 프로젝트 탐색기에서 gradle.properties 파일을 열어 PROP_APP_ABI와 PROP_BUILD_TYPE 영역 내용을 다음과 같이 수정합니다. 제가 쓰는 cocos2d-x 버전이 기본적으로 CMake로 빌드하게 되어있습니다. ndk-build 시스템으로 빌드하기 위해 변경해줍니다. 또한 모든 타입의 ABI에 대해 빌드를 가능하게 합니다.
+   ```Gradle
+   PROP_APP_ABI=arm64-v8a:armeabi-v7a:x86:x86_64
+   PROP_BUILD_TYPE=ndk-build
+   ```
+3. 텍스트 에디터로 `creator 프로젝트 루트`/packages/creator-luacpp-support/reader/Android.mk 파일을 열어 다음과 같이 수정합니다.
+   ```CMake
+   LOCAL_PATH := $(call my-dir)
+
+   cpp_src := \
+   animation/AnimateClip.cpp \
+   animation/AnimationClip.cpp \
+   animation/AnimationManager.cpp \
+   animation/Easing.cpp \
+   animation/Bezier.cpp \
+   collider/Collider.cpp \
+   collider/ColliderManager.cpp \
+   collider/Contract.cpp \
+   collider/Intersection.cpp \
+   CreatorReader.cpp \
+   ui/PageView.cpp \
+   ui/RichtextStringVisitor.cpp
+
+   # for cpp
+   include $(CLEAR_VARS)
+   path := $(LOCAL_PATH)
+
+   LOCAL_MODULE := creator_reader
+   LOCAL_MODULE_FILENAME := libcreatorreader
+   LOCAL_ARM_MODE := arm
+   LOCAL_SRC_FILES := $(cpp_src)
+
+   LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/.
+   LOCAL_C_INCLUDES := $(LOCAL_PATH)/.
+   LOCAL_STATIC_LIBRARIES := cc_static
+   LOCAL_STATIC_LIBRARIES += dragonbones_static
+
+   include $(BUILD_STATIC_LIBRARY)
+
+
+   $(call import-add-path, $(path))
+   $(call import-module, dragonbones)
+   ```
+4. 3. 텍스트 에디터로 `creator 프로젝트 루트`/packages/creator-luacpp-support/reader/dragonbones/Android.mk 파일을 열어 다음과 같이 수정합니다.
+   ```CMake
+   LOCAL_PATH := $(call my-dir)
+
+   include $(CLEAR_VARS)
+
+   LOCAL_MODULE := dragonbones_static
+
+   LOCAL_MODULE_FILENAME := libdragonbones
+
+
+   LOCAL_SRC_FILES :=       animation/Animation.cpp \
+                            animation/AnimationState.cpp \
+                            animation/TimelineState.cpp \
+                            animation/WorldClock.cpp \
+                            armature/Armature.cpp \
+                            armature/Bone.cpp \
+                            armature/Slot.cpp \
+                            core/BaseObject.cpp \
+                            events/EventObject.cpp \
+                            factories/BaseFactory.cpp \
+                            model/AnimationData.cpp \
+                            model/ArmatureData.cpp \
+                            model/DragonBonesData.cpp \
+                            model/FrameData.cpp \
+                            model/TimelineData.cpp \
+                            parsers/DataParser.cpp \
+                            parsers/JSONDataParser.cpp \
+                            textures/TextureData.cpp \
+                            cocos2dx/CCArmatureDisplay.cpp \
+                            cocos2dx/CCFactory.cpp \
+                            cocos2dx/CCSlot.cpp \
+                            cocos2dx/CCTextureData.cpp
+
+
+   LOCAL_C_INCLUDES := $(LOCAL_PATH)/..
+
+   LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/..
+
+   LOCAL_STATIC_LIBRARIES := cc_static
+
+   LOCAL_CFLAGS += -Wno-psabi
+   LOCAL_EXPORT_CFLAGS += -Wno-psabi
+
+   include $(BUILD_STATIC_LIBRARY)
+   ```
+
+5. Cocos creator에서 Project->LuaCpp Support->Build Now를 눌러 다시 빌드 합니다.
+
+6. `cpp 프로젝트 루트`/proj.android/app/jni/Android.mk를 열어 다음과 같이 수정합니다.
+   ```CMake
+   LOCAL_PATH := $(call my-dir)
+
+   include $(CLEAR_VARS)
+
+   LOCAL_MODULE := MyGame_shared
+
+   LOCAL_MODULE_FILENAME := libMyGame
+
+   FILE_LIST := $(wildcard $(LOCAL_PATH)/../../../Classes/*.cpp)
+   LOCAL_SRC_FILES := $(FILE_LIST:$(LOCAL_PATH)/%=%)
+   LOCAL_SRC_FILES += hellocpp/main.cpp
+
+   LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes
+
+   # _COCOS_HEADER_ANDROID_BEGIN
+   # _COCOS_HEADER_ANDROID_END
+
+   LOCAL_STATIC_LIBRARIES := cc_static
+   # LOCAL_STATIC_LIBRARIES += creator_reader_lua  # for lua project
+   LOCAL_STATIC_LIBRARIES += creator_reader   # add dependence
+
+   # _COCOS_LIB_ANDROID_BEGIN
+   # _COCOS_LIB_ANDROID_END
+
+   include $(BUILD_SHARED_LIBRARY)
+
+   $(call import-module, cocos)
+   $(call import-module, ./../../Classes/reader)  # import module path
+
+   LOCAL_PATH := $(call my-dir)
+   ```
+
+7. 안드로이드 스튜디오에서 빌드하고 실행이 잘 되는지 확인합니다.
+   ![](https://skaiblue.github.io/assets/img/posts/cocos/start/13.png "Android 실행화면")
