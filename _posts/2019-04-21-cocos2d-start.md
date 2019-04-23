@@ -51,12 +51,12 @@ Cocos2d-x를 사용하기 위해서 초기 설정 작업이 필요합니다. 저
 2. Cocos Creator 에서 프로젝트를 생성합니다. 테스트를 위해 Hello World 템플릿으로 프로젝트를 생성했습니다. 여기서 생성한 프로젝트 경로를 `creator 프로젝트 루트`라고 부르겠습니다. 프로젝트가 생성되면 Cocos Creator 개발 화면(?)이 뜰겁니다.
 ![](https://skaiblue.github.io/assets/img/posts/cocos/start/1.png "cocos creator 프로젝트 생성 화면")
 
-1. 터미널에서 다음 명령어를 실행해 creator_to_cocos2dx 소스코드를 복제합니다.
+3. 터미널에서 다음 명령어를 실행해 creator_to_cocos2dx 소스코드를 복제합니다.
    ```
    git clone https://github.com/cocos2d/creator_to_cocos2dx
    ```
 
-2. creator_to_cocos2dx/creator_project/packages 폴더에 creator_to_cocos2dx 폴더가 있습니다. 이 폴더를 `creator 프로젝트 루트`/packages 폴더에 복사해 주세요
+4. creator_to_cocos2dx/creator_project/packages 폴더에 creator_luacpp_support 폴더가 있습니다. 이 폴더를 `creator 프로젝트 루트`/packages 폴더에 복사해 주세요
 ![](https://skaiblue.github.io/assets/img/posts/cocos/start/2.png "패키지 복사")
 
 5. 제대로 복사 하셨으면 Cocos Creator 개발 화면의 콘솔 뷰에 아래와 같은 텍스트가 표시됩니다.
