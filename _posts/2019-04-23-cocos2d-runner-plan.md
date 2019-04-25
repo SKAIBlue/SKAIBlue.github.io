@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Runner] 1. 런 게임 만들기 - 기획
+title: Runner:1. 런 게임 만들기 - 기획
 description: >
   Cocos2d-x와 Cocos creator로 런 장르의 게임을 만들어 봅니다.
 tags: [cocos2d]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Runner] 2. 런 게임 만들기 - 초기 셋팅과 끝없이 이어지는 바닥
+title: Runner:2. 런 게임 만들기 - 초기 셋팅과 끝없이 이어지는 바닥
 description: >
   Cocos2d-x와 Cocos creator로 런 장르의 게임을 만들어 봅니다.
 tags: [cocos2d]
