@@ -7,3 +7,6 @@ tags: [etc]
 redirect_to: https://play.google.com/store/apps/details?id=com.skaiblue.threetwofusion
 ---
 재밌게 플레이 해주세요!
+<script>
+  console.log("test");
+</script>
