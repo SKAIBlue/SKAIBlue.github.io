@@ -20,7 +20,7 @@
     <script>
         function DetectAndServe() {
             let os = getMobileOperatingSystem();
-            if (os == "Android") {
+            if (os == "Android") {market://details?id=com.skaiblue.threetwofusion
                 window.location.href = "market://details?id=com.skaiblue.threetwofusion";
             } else if (os == "iOS") {
                 window.location.href = "http://appstore.com/jongwoopark";
@@ -28,15 +28,22 @@
         }
     </script>
     <style>
+        main{
+            margin: 8px auto 8px auto;
+            width: 400px;
+        }
         a {
             text-decoration: none;
             color: black;
+        }
+        img {
+            width: 100%;
         }
     </style>
 </head>
 
 <body onload="DetectAndServe()">
-    <div style="margin: 8px auto 8px auto; width: 400px;">
+    <main>
         <img style="width: 100%" src="https://skaiblue.github.io/assets/img/thumbnails/fusion.png" alt
             title="thumbnails">
         <div>
@@ -46,12 +53,12 @@
                 </a>
             </div>
             <div>
-                <a class="link" href="https://play.google.com/store/apps/details?id=com.skaiblue.threetwofusion">
+                <a class="link" href="market://details?id=com.skaiblue.threetwofusion">
                     <img src="https://skaiblue.github.io/assets/img/etc/playstore.png">
                 </a>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
