@@ -29,11 +29,11 @@ tags: [projects]
 
 생존>>>>>>>>>>>>>>>>게임미관
 
-물론 게임을 플레이할 때는 배너 광고가 숨겨지도록 구현했다.
+물론 게임을 플레이 할 때는 배너 광고가 숨겨지도록 구현했다.
 
+이번에는 공식 페이스북이나 트위트 계정을 만들어서 홍보도 조금씩 해보려고 게임 내에 사이트 연결 버튼도 만들고, 설치 유도를 위해 점수를 공유하는 기능도 추가했다.
 
-
-출시를 하려고 했는데, 테스트를 하다가 버그를 발견해서 이틀 출시가 미뤄졌다.
+여러가지 고려하면서 틈틈히 개발해서 25일 정도 걸렸는데, 테스트 하다가 버그를 발견해서 이틀 정도 더 소모되었다 ㅠㅠ
 
 심사를 위해 앱을 제출하고 하루 뒤에 심사 결과가 나왔는데 바이너리가 거부되어서 기겁했다 ㅠㅠ
 
@@ -64,7 +64,7 @@ Given the tendency for apps of this type to violate the aforementioned guideline
 Should you choose to resubmit this app without confirming this app’s compliance, the next submission of this app will still require a longer review time. Additionally, this app will not be eligible for an expedited review until we have received your confirmation.
 ```
 
-[앱 심사 한글 가이드라인 링크](https://developer.apple.com/kr/app-store/review/guidelines/#accurate-metadata)
+[앱 심사 한글 가이드라인 링크](https://developer.apple.com/kr/app-store/review/guidelines/#accurate-metadata) 참고
 
 항목을 살펴보니 도박이 어쩌고, 금융이 어쩌고, 외부 결제 시스템이 어쩌고 하는데 내가 제출한 게임은 문제될 내용이 없었다.
 
