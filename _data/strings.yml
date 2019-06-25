@@ -10,35 +10,36 @@
 
 # Free version
 # ---------------------------------------------------------------------------------------
-home:                  Home
-pages:                 Pages
-posts:                 Posts
+home:                  홈
+pages:                 페이지
+posts:                 포스트
 about:                 About
-related_posts:         Related Posts
-other_projects:        Other Projects
-comments:              Comments
+related_posts:         관련 포스트
+other_projects:        다른 프로젝트
+comments:              댓글
 jump_to:               Jump to
-navigation:            Navigation
-social:                Social
-links:                 Links
+navigation:            네비게이션
+social:                소셜
+links:                 링크
 pagination:            Pagination
 newer:                 Newer
 older:                 Older
-back:                  Back
+back:                  뒤로
 permalink:             Permalink
 permalink_icon:        icon-link
 templates:             Templates (for web app)
+present:               present
 
-loading:               Loading…
-redirecting:           Redirecting…
+loading:               로딩중…
+redirecting:           리다이렉트중…
 
 continue_reading:      >
-  Continue reading <!--post_title-->
+    <!--post_title--> 계속 읽기
 
 cookies_banner:
   text:                >
-    This site uses cookies. [Cookies Policy](/hydejack/cookies-policy/).
-  okay:                Okay
+    이 사이트는 쿠키를 사용합니다 [Cookies Policy](/cookies-policy/).
+  okay:                확인
 
 not_found:
   title:               '404: 페이지를 찾을 수 없음'
@@ -48,9 +49,9 @@ not_found:
   home_link:           Head back home
 
 error:
-  title:               Error
+  title:               오류
   message:             |
-    Sorry, an error occurred while loading <!--link-->.
+    죄송합니다. 로딩하는 과정에 오류가 발생했습니다. <!--link-->.
 
 # Separators
 # ---------------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ category_start:        'in '
 category_spearator:    ' / '
 tag_start:             'on '
 tag_separator:         ', '
-
+from_to_separator:     '–'
 
 # Date formats
 # ---------------------------------------------------------------------------------------
@@ -79,31 +80,27 @@ date_formats:
 # If you don't own the PRO version of Hydejack, modifying these will have no effect.
 
 tinyletter:
-  title:               Newsletter
+  title:               Commercial break
   label:               Email
-  placeholder:         mail@example.com
+  placeholder:         Enter your email address
   button:              Subscribe
   message:             |
-    Subscribe to my newsletter.
-    0
+    Pay the *iron price* for this theme by adding yourself to the mailing list.
+    Receive development updates, advanced tutorials,
+    and anything else I can come up with as it relates to **Hydejack**.
+
     <!--form-->
 
-    Open `_data/strings.yml` to edit this text.
+    No 3rd party products, no spam. Emails handled by [Tinyletter](https://tinyletter.com/)
     {:.faded}
 
 welcome:
-  selected_projects:   Selected Projects
-  selected_posts:      Selected Posts
-  recent_projects:     Recent Projects
-  recent_posts:        Recent Posts
   more_projects:       See <!--projects_title--> for more
   more_posts:          See <!--posts_title--> for more
 
 resume:
   location:            Location
   location_separator:  ', '
-  from_to_separator:   '–'
-  present:             present
   email:               Email
   phone:               Phone
   website:             Website
