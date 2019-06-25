@@ -39,7 +39,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     ※ 앞으로 언급이 없더라도 항상 hpp확장자는 h로 변경해 주시길 바랍니다.
 16. CreatorScene.hpp에 다음 코드를 작성합니다.
 
-    ```c
+    ```cpp
     #ifndef CreatorScene_hpp
     #define CreatorScene_hpp
 
@@ -62,7 +62,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 17. CreatorScene.cpp에 다음 코드를 작성합니다.
 
-    ```c
+    ```cpp
     #include "CreatorScene.h"
     #include "reader/CreatorReader.h"
 
@@ -84,7 +84,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 18. GamePlayScene.h 파일과 GamePlayScene.cpp 파일을 추가한 뒤 다음 코드를 작성합니다.
     
-    ```c
+    ```cpp
     /* GamePlayScene.h */
     #ifndef GamePlayScene_h
     #define GamePlayScene_h
@@ -103,7 +103,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     #endif /* GamePlayScene_hpp */
     ```
 
-    ```c
+    ```cpp
     #include "GamePlayScene.h"
     #include "reader/CreatorReader.h"
 
@@ -119,12 +119,12 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 19. AppDelegate.cpp 파일을 열어 다음 #include "HelloWorldScene.h"를 #include "GamePlayScene.h"로 변경합니다.
     
 20. 120 라인 부근에 아래 코드를 지워주세요
-    ```c
+    ```cpp
     auto scene = HelloWorld::createScene();
     ```
 
 21. 3에서 지운 위치에 다음 코드를 추가합니다.
-    ```c
+    ```cpp
     auto scene = GamePlay().getScene();
     ```
 
@@ -133,7 +133,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 23. 이제 바닥이 움직이는 기능을 구현합니다. 씬에 있는 노드에 컴포넌트를 붙이는 방식으로 만들 생각입니다. 당장은 이 방법말곤 좋은 생각이 떠오르지 않네요. CDecoMovement.h와 CDecoMovement.cpp를 추가하여 다음 코드를 작성합니다.
 
-    ```c
+    ```cpp
     /*CDecoMovement.h*/
     #ifndef CDecoMovement_hpp
     #define CDecoMovement_hpp
@@ -148,7 +148,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     #endif /* CDecoMovement_hpp */
     ```
 
-    ```c
+    ```cpp
     /*CDecoMovement.cpp*/
     #include "CDecoMovement.h"
 
@@ -161,7 +161,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 24. Definitions.h 파일을 추가하여 다음 코드를 작성합니다. Definitions.h에는 상수나 여러 함수를 정의할 것입니다.
 
-    ```c
+    ```cpp
     #ifndef Definitions_h
     #define Definitions_h
 
@@ -179,7 +179,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 25. GamePlayScene.cpp 파일을 다음과 같이 수정합니다.
 
-    ```c
+    ```cpp
     #include "GamePlayScene.h"
     #include "reader/CreatorReader.h"
     #include "CDecoMovement.h"
@@ -200,7 +200,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
 27. CDecoMovement.cpp에서 update 함수를 다음과 같이 수정해 봅시다.
 
-    ```c
+    ```cpp
     auto pos = _owner->getPosition();
     auto nX = pos.x - 100 * delta;
     if(nX < 512)
