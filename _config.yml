@@ -48,10 +48,20 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
-  - title:             Documentation
-    url:               https://hydejack.com/docs/
+  - title:             Projects
+    url:               /projects/
+  - title:             유니티
+    url:               /unity/
+  - title:             안드로이드
+    url:               /android/
+  - title:             C/C++
+    url:               /c/
+  - title:             Cocos2d-x
+    url:               /cocos2d/
+  - title:             Meteor
+    url:               /meteor/
+  - title:             ETC
+    url:               /etc/
   - title:             About
     url:               /about/
 
