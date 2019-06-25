@@ -38,8 +38,8 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
     ※ 앞으로 언급이 없더라도 항상 hpp확장자는 h로 변경해 주시길 바랍니다.
 16. CreatorScene.hpp에 다음 코드를 작성합니다.
-17. 
-    ```CPP
+
+    ```c
     #ifndef CreatorScene_hpp
     #define CreatorScene_hpp
 
@@ -60,9 +60,9 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     #endif /* CreatorScene_hpp */
     ```
 
-18. CreatorScene.cpp에 다음 코드를 작성합니다.
+17. CreatorScene.cpp에 다음 코드를 작성합니다.
 
-    ```CPP
+    ```c
     #include "CreatorScene.h"
     #include "reader/CreatorReader.h"
 
@@ -82,9 +82,9 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
     ```
 
-19. GamePlayScene.h 파일과 GamePlayScene.cpp 파일을 추가한 뒤 다음 코드를 작성합니다.
+18. GamePlayScene.h 파일과 GamePlayScene.cpp 파일을 추가한 뒤 다음 코드를 작성합니다.
     
-    ```CPP
+    ```c
     /* GamePlayScene.h */
     #ifndef GamePlayScene_h
     #define GamePlayScene_h
@@ -103,7 +103,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     #endif /* GamePlayScene_hpp */
     ```
 
-    ```CPP
+    ```c
     #include "GamePlayScene.h"
     #include "reader/CreatorReader.h"
 
@@ -116,24 +116,24 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
 
     ```
 
-20. AppDelegate.cpp 파일을 열어 다음 #include "HelloWorldScene.h"를 #include "GamePlayScene.h"로 변경합니다.
+19. AppDelegate.cpp 파일을 열어 다음 #include "HelloWorldScene.h"를 #include "GamePlayScene.h"로 변경합니다.
     
-21. 120 라인 부근에 아래 코드를 지워주세요
-    ```CPP
+20. 120 라인 부근에 아래 코드를 지워주세요
+    ```c
     auto scene = HelloWorld::createScene();
     ```
 
-22. 3에서 지운 위치에 다음 코드를 추가합니다.
-    ```CPP
+21. 3에서 지운 위치에 다음 코드를 추가합니다.
+    ```c
     auto scene = GamePlay().getScene();
     ```
 
-23. 실행이 잘 되는지 테스트해봅니다.
+22. 실행이 잘 되는지 테스트해봅니다.
     ![](/assets/img/posts/cocos/run/3.png "First run")
 
-24. 이제 바닥이 움직이는 기능을 구현합니다. 씬에 있는 노드에 컴포넌트를 붙이는 방식으로 만들 생각입니다. 당장은 이 방법말곤 좋은 생각이 떠오르지 않네요. CDecoMovement.h와 CDecoMovement.cpp를 추가하여 다음 코드를 작성합니다.
+23. 이제 바닥이 움직이는 기능을 구현합니다. 씬에 있는 노드에 컴포넌트를 붙이는 방식으로 만들 생각입니다. 당장은 이 방법말곤 좋은 생각이 떠오르지 않네요. CDecoMovement.h와 CDecoMovement.cpp를 추가하여 다음 코드를 작성합니다.
 
-    ```CPP
+    ```c
     /*CDecoMovement.h*/
     #ifndef CDecoMovement_hpp
     #define CDecoMovement_hpp
@@ -148,7 +148,7 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     #endif /* CDecoMovement_hpp */
     ```
 
-    ```CPP
+    ```c
     /*CDecoMovement.cpp*/
     #include "CDecoMovement.h"
 
@@ -159,9 +159,9 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     }
     ```
 
-25. Definitions.h 파일을 추가하여 다음 코드를 작성합니다. Definitions.h에는 상수나 여러 함수를 정의할 것입니다.
+24. Definitions.h 파일을 추가하여 다음 코드를 작성합니다. Definitions.h에는 상수나 여러 함수를 정의할 것입니다.
 
-    ```CPP
+    ```c
     #ifndef Definitions_h
     #define Definitions_h
 
@@ -177,9 +177,9 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     ```
 
 
-26. GamePlayScene.cpp 파일을 다음과 같이 수정합니다.
+25. GamePlayScene.cpp 파일을 다음과 같이 수정합니다.
 
-    ```CPP
+    ```c
     #include "GamePlayScene.h"
     #include "reader/CreatorReader.h"
     #include "CDecoMovement.h"
@@ -195,12 +195,12 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
         floors->addComponent(AutoRelease(new CDecoMovement()));
     }
 
-27. 실행을 해보면 바닥이 왼쪽으로 움직이는 것을 볼 수 있습니다. 하지만 바닥의 길이에는 한계가 있어서 왼쪽으로 이동하다 보면 바닥이 끊기는 것을 볼 수 있습니다. 약간의 트릭으로 바닥이 무한히 이어지도록 만들겠습니다.
+26. 실행을 해보면 바닥이 왼쪽으로 움직이는 것을 볼 수 있습니다. 하지만 바닥의 길이에는 한계가 있어서 왼쪽으로 이동하다 보면 바닥이 끊기는 것을 볼 수 있습니다. 약간의 트릭으로 바닥이 무한히 이어지도록 만들겠습니다.
     ![](/assets/img/posts/cocos/run/4.png "finite floor")
 
-28. CDecoMovement.cpp에서 update 함수를 다음과 같이 수정해 봅시다.
+27. CDecoMovement.cpp에서 update 함수를 다음과 같이 수정해 봅시다.
 
-    ```CPP
+    ```c
     auto pos = _owner->getPosition();
     auto nX = pos.x - 100 * delta;
     if(nX < 512)
@@ -208,5 +208,5 @@ cocos2d-x와 Cocos Creator로 프로젝트는 이미 만들어 둔 상태입니�
     _owner->setPosition(nX, pos.y);
     ```
 
-29. 실행해보면 시간이 지나도 바닥이 끊기지 않는 것을 볼 수 있습니다.
+28. 실행해보면 시간이 지나도 바닥이 끊기지 않는 것을 볼 수 있습니다.
     ![](/assets/img/posts/cocos/run/5.png "Infinite floor")
