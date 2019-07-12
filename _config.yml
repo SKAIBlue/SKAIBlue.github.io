@@ -58,8 +58,8 @@ menu:
     url:               /c/
   - title:             Cocos2d-x
     url:               /cocos2d/
-  - title:             Meteor
-    url:               /meteor/
+  - title:             Web
+    url:               /web/
   - title:             ETC
     url:               /etc/
 
@@ -124,6 +124,10 @@ defaults:
     values:
       seo:
         type:          WebPage
+  - scope:
+      type:            posts
+    values:
+      comments:        true
 
 
 # 3rd Party Integrations
