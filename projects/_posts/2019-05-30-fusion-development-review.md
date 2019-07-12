@@ -87,7 +87,7 @@ Please reply if you need more information.
 ```
 요약하면 각 항목에 대해 **'내 게임은 어쩌구 저쩌구해서 이 항목을 위반하지 않았다.'** 를 작성해 보냈더니
 
-![](https://skaiblue.github.io/assets/img/projects/1.png 'apple reply')
+![](https://skaiblue.github.io/assets/img/projects/32fusionreview/1.png 'apple reply')
 
 승인 메일이 왔다 ㅠㅠㅠㅠㅠ
 
