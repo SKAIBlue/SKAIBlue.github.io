@@ -1,7 +1,7 @@
 ---
 layout: list
-title: Meteor
-slug: meteor
+title: Web
+slug: web
 menu: true
 order: 5
 description: >
