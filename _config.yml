@@ -59,7 +59,7 @@ menu:
   - title:             Cocos2d-x
     url:               /cocos2d/
   - title:             Web
-    url:               /webprogramming/
+    url:               /web/
   - title:             ETC
     url:               /etc/
 
