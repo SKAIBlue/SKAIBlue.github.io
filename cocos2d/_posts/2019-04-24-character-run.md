@@ -4,6 +4,7 @@ title: Runner:2. 런 게임 만들기 - 초기 셋팅과 끝없이 이어지는 
 description: >
   Cocos2d-x와 Cocos creator로 런 장르의 게임을 만들어 봅니다.
 tags: [cocos2d]
+comments: true
 ---
 
 디자인은 뒤로하고 게임 규칙부터 구현해보겠습니다. 런 장르 게임에서 가장 기본이 되는 캐릭터가 달리는것을 구현하려면 끝없이 이어지는 바닥이 필요합니다. 이런 바닥을 만들어 보겠습니다.
