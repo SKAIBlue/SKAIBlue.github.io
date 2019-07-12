@@ -32,7 +32,7 @@ tagline:               >
   C/C++/JAVA/C#/JavaScript/HTML
 
 # A list of keywords for your blog
-keywords:              [C, C++, java, C#, html, Unity, Android]
+keywords:              [C, C++, java, C#, Web, Unity, Android]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -59,7 +59,7 @@ menu:
   - title:             Cocos2d-x
     url:               /cocos2d/
   - title:             Web
-    url:               /web/
+    url:               /webprogramming/
   - title:             ETC
     url:               /etc/
 
