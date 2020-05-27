@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://filebox.hiworks.com/service/download/94cb92dac050876b1a0d048d14ad02cb755d9aa7888712f92bf71bb4fa4d96cf</string>
+					<string>https://github.com/SKAIBlue/SKAIBlue.github.io/raw/master/assets/app/ios/app.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://firebasestorage.googleapis.com/v0/b/cybermdcare.appspot.com/o/57.JPG?alt=media&token=c4d401f8-1c05-4e3b-be94-3a942eb6ccc9</string>
+					<string>https://github.com/SKAIBlue/SKAIBlue.github.io/raw/master/assets/app/ios/57.jpg</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>https://firebasestorage.googleapis.com/v0/b/cybermdcare.appspot.com/o/512.JPG?alt=media&token=0f868d54-f599-4de0-9a8d-99af48d903de</string>
+					<string>https://github.com/SKAIBlue/SKAIBlue.github.io/raw/master/assets/app/ios/512.jpg</string>
 				</dict>
 			</array>
 			<key>metadata</key>
